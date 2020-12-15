@@ -1,0 +1,101 @@
+#app {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#app #time-container #time-inner-container {
+    background-color: #ffefef59;
+    color: white;
+    padding: 24px 0;
+}
+
+#app #current-time {
+    font-size: 100px;
+    display: inline-block;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(78, 78, 78);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.pane {
+    padding-top: 0px !important;
+    max-width: 2000px !important;
+}
+
+.sidebar hr {
+    border-color: rgb(165, 164, 164) !important;
+}
+
+.sidebar.show {
+    width: 250px;
+}
+
+.sidebar-content {
+    padding: 24px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#moreMenu {
+    visibility: hidden;
+}
+
+.btnMore {
+    position: absolute;
+    bottom: 28px;
+    left: 24px;
+}
+
+#moreMenu {
+    bottom: 0;
+}
+
+#moreMenu .row {
+    max-height: 300px;
+}
+
+#moreMenu .more-col {
+    text-align: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.draggable {
+    display: none;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    margin-left: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #app #current-time {
+        font-size: 60px;
+        display: inline-block;
+    }
+}

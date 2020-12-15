@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Clock</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <div id="app">
+        <nav id="mainSidebar" class="sidebar">
+            <div class="sidebar-content text-white font-weight-light">
+                <h4>Settings</h4>
+                <form>
+                    <label for="hourClockSettings">24-HOUR CLOCK</label><br />
+                    <div class="row m-0">
+                        <div class="form-check mr-3">
+                            <input type="radio" value="yes" name="hourClockSettings" class="form-check-input" id="yesHourClockSettings" />
+                            <label class="form-check-label" for="yesHourClockSettings">
+                  Yes
+                </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" value="no" name="hourClockSettings" class="form-check-input" id="noHourClockSettings" />
+                            <label class="form-check-label" for="noHourClockSettings">
+                  No
+                </label>
+                        </div>
+                    </div>
+                    <hr />
+                    <label for="showSecondsSettings">SHOW SECONDS</label><br />
+                    <div class="row m-0">
+                        <div class="form-check mr-3">
+                            <input type="radio" value="yes" name="showSecondsSettings" class="form-check-input" id="yesShowSecondsSettings" />
+                            <label class="form-check-label" for="yesShowSecondsSettings">
+                  Yes
+                </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" value="no" name="showSecondsSettings" class="form-check-input" id="noShowSecondsSettings" />
+                            <label class="form-check-label" for="noShowSecondsSettings">
+                  No
+                </label>
+                        </div>
+                    </div>
+                    <hr />
+                    <label for="showDateSettings">SHOW DATE</label><br />
+                    <div class="row m-0">
+                        <div class="form-check mr-3">
+                            <input type="radio" value="yes" name="showDateSettings" class="form-check-input" id="yesShowDateSettings" />
+                            <label class="form-check-label" for="yesShowDateSettings">
+                  Yes
+                </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" value="no" name="showDateSettings" class="form-check-input" id="noShowDateSettings" />
+                            <label class="form-check-label" for="noshowDateSettings">
+                  No
+                </label>
+                        </div>
+                    </div>
+                    <hr />
+                    <button class="btn btn-light px-4" type="submit" href="javascript:void(0)" class="closebtn" onclick="saveSettings(event)">
+              Save
+            </button>
+                </form>
+            </div>
+        </nav>
+
+        <div id="main">
+            <button class="btn btn-transparent" onclick="openSettings()">
+          <h3><span>&#9881;</span></h3>
+        </button>
+            <div class="row m-auto">
+                <div class="m-auto col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div id="time-container" class="text-center">
+                        <div id="time-inner-container">
+                            <h3 id="greeting"></h3>
+                            <div id="current-time"></div>
+                            <div id="current-date"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-light px-4 btnMore" onclick="showMore()">
+            More
+          </button>
+            </div>
+        </div>
+
+        <div id="moreMenu" class="cupertino-pane">
+            <nav class="w-100 h-100 m-0 overflow-y bg-dark row text-light" style="overflow: auto">
+                <div class="more-col col-lg-3 col-md-6 col-sm-12">
+                    <h5>DAY OF THE WEEK</h5>
+                    <h4 id="currentDayOfWeek" class="font-weight-bold"></h4>
+                </div>
+                <div class="more-col col-lg-3 col-md-6 col-sm-12">
+                    <h5>DAY OF THE MONTH</h5>
+                    <h4 id="currentDateOfMonth" class="font-weight-bold"></h4>
+                </div>
+                <div class="more-col col-lg-3 col-md-6 col-sm-12">
+                    <h5>DAY OF THE YEAR</h5>
+                    <h4 id="currentDayOfYear" class="font-weight-bold"></h4>
+                </div>
+                <div class="more-col col-lg-3 col-md-6 col-sm-12">
+                    <h5>WEEK OF THE YEAR</h5>
+                    <h4 id="currentWeekOfYear" class="font-weight-bold"></h4>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/1.25.0/luxon.min.js"></script>
+    <script src="https://unpkg.com/cupertino-pane/dist/cupertino-pane.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
